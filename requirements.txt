@@ -1,0 +1,5 @@
+streamlit
+requests
+pandas
+pycountry
+reverse_geocoder
