@@ -75,7 +75,9 @@ def life_expectancy(iso3):
     df = df[["TimeDim", "NumericValue"]].rename(
         columns={"TimeDim": "Year", "NumericValue": "Life expectancy (years)"}
     )
-    return df.sort_values("Year")
+    df = df.sort_values("Year")
+    df["Year"] = df["Year"].astype(str)
+    return df
 
 
 # --- Space section ---
